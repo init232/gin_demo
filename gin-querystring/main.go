@@ -17,9 +17,12 @@ func main() {
 			fmt.Println("取不到")
 			name = "somebody"
 		}
-		ctx.JSON(http.StatusOK, gin.H{
-			"name": name,
-		})
+		ctx.JSON(
+			http.StatusOK,
+			gin.H{
+				"name": name,
+			},
+		)
 	})
 	r.Run(":9090")
 }
